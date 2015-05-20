@@ -28,11 +28,11 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
   require('./gulp/' + file)(options);
 });
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
-});
-
 gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
         .pipe(ghPages());
+});
+
+gulp.task('default', ['clean'], function () {
+    gulp.start('build');
 });
