@@ -1,8 +1,12 @@
 'use strict';
 
 angular.module('sv')
-  .controller('MainCtrl', function ($scope, GithubAPI, Dropbox) {
-    $scope.accountInfo = Dropbox.accountInfo();
+  .controller('MainCtrl', function ($scope, GithubAPI) {
+
+    var client = new Dropbox.Client({key: '4nl4o8v9y9wqv1i'});
+    var defaultDatastore;
+    client.authenticate();
+        
     $scope.user = {'username': '', 'repos':[], 'branches':[], 'currentRepo':'', 'currentBranch': 'master', 'currentCommits':[]}
     $scope.usernameChange = function(){
         GithubAPI.getRepos($scope.user.username).then(function(data){
