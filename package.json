@@ -1,7 +1,16 @@
 {
   "name": "sv",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "acorn": "^1.2.2",
+    "alter": "^0.2.0",
+    "convert-source-map": "^1.1.1",
+    "ordered-ast-traverse": "^1.1.1",
+    "source-map": "^0.4.2",
+    "stable": "^0.1.5",
+    "stringmap": "^0.2.2",
+    "stringset": "^0.2.1"
+  },
   "scripts": {
     "test": "gulp test"
   },

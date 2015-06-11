@@ -18,16 +18,14 @@
     <thead>
     <tr>
       <th>Time Stamp</th>
-      <th>MAC Address</th>
-      <th>IP Address</th>
+      <th>Host ID</th>
       <th>Commit</th>
     </tr>
     </thead>
     <tbody>
     <tr ng-repeat="commit in user.currentCommits track by $index">
       <td>{{commit.timestamp}}</td>
-      <td>{{commit.mac}}</td>
-      <td>{{commit.ip}}</td>
+      <td>{{commit.hostid}}</td>
       <td><a ng-href="#">{{commit.commit}}</a></td>
     </tr>
     </tbody>
